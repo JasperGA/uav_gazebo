@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Iris 4 Arm URDF">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.118976069095555 0.102363460836218 0.167001551279831"
+        rpy="0 0 0" />
+      <mass
+        value="0.127141903735899" />
+      <inertia
+        ixx="0.000799060413383533"
+        ixy="-8.55708484011509E-20"
+        ixz="-6.20296837801883E-06"
+        iyy="0.00164900184112433"
+        iyz="2.82347866577026E-19"
+        izz="0.000891280010851742" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Iris 4 Arm URDF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Iris 4 Arm URDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="mid_ring">
+    <inertial>
+      <origin
+        xyz="-9.8394E-15 0.0052857 7.0222E-15"
+        rpy="0 0 0" />
+      <mass
+        value="0.10996" />
+      <inertia
+        ixx="0.0004038"
+        ixy="1.2993E-22"
+        ixz="-1.6941E-21"
+        iyy="0.00080515"
+        iyz="-1.9734E-21"
+        izz="0.0004038" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Iris 4 Arm URDF/meshes/mid_ring.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Iris 4 Arm URDF/meshes/mid_ring.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Spin"
+    type="continuous">
+    <origin
+      xyz="0.118976069095558 -0.167001551279828 0.102913963241254"
+      rpy="1.5707963267949 0 0.0204298931169507" />
+    <parent
+      link="base_link" />
+    <child
+      link="mid_ring" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="arm1">
+    <inertial>
+      <origin
+        xyz="0.072116 0.0025 -0.054534"
+        rpy="0 0 0" />
+      <mass
+        value="0.020095" />
+      <inertia
+        ixx="9.0078E-06"
+        ixy="-1.3616E-22"
+        ixz="-6.1573E-06"
+        iyy="2.0107E-05"
+        iyz="2.2489E-22"
+        izz="1.1183E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Iris 4 Arm URDF/meshes/arm1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Iris 4 Arm URDF/meshes/arm1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm1"
+    type="fixed">
+    <origin
+      xyz="0.0016208 0.02 -0.0085339"
+      rpy="0 -0.28193 0" />
+    <parent
+      link="mid_ring" />
+    <child
+      link="arm1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="arm2">
+    <inertial>
+      <origin
+        xyz="0.072116 0.0025 -0.054534"
+        rpy="0 0 0" />
+      <mass
+        value="0.020095" />
+      <inertia
+        ixx="9.0078E-06"
+        ixy="4.6808E-23"
+        ixz="-6.1573E-06"
+        iyy="2.0107E-05"
+        iyz="1.8276E-22"
+        izz="1.1183E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Iris 4 Arm URDF/meshes/arm2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Iris 4 Arm URDF/meshes/arm2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="arm2"
+    type="fixed">
+    <origin
+      xyz="-0.0016208 0.015 0.0085339"
+      rpy="3.1416 0.28193 3.1416" />
+    <parent
+      link="mid_ring" />
+    <child
+      link="arm2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
